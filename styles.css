@@ -13,6 +13,7 @@ body{
     font-family: 'Montserrat';
     background-color: var(--background-c);
     color: var(--font-c);
+    -webkit-tap-highlight-color; 
 }
 
 /*------------------- HEADER ----------------------------*/
@@ -180,7 +181,6 @@ p{
     left: 0;
     width: 100%;
     height: 0px;
-    border-radius: 14px;
     background-color: var(--background-c);
     transition: height 2s ease-out;
     z-index: -1;
