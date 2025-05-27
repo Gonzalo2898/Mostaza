@@ -13,7 +13,7 @@ body{
     font-family: 'Montserrat';
     background-color: var(--background-c);
     color: var(--font-c);
-    -webkit-tap-highlight-color; 
+    -webkit-tap-highlight-color: transparent;
 }
 
 /*------------------- HEADER ----------------------------*/
