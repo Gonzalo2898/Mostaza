@@ -1,0 +1,139 @@
+*{
+    box-sizing: border-box;
+}
+
+body, header, nav, ul, li, a, img, p, h1, h2 h3{
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    --background-c: rgb(212, 26, 26);
+    --font-c: white;
+    font-family: 'Montserrat';
+    background-color: var(--background-c);
+    color: var(--font-c);
+}
+
+/*------------------- HEADER ----------------------------*/
+
+.header{
+    width: 100vw;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__nav{
+    width: 100vw;
+}
+
+.header__nav-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    width: 100vw;
+}
+
+.header__nav-list a{
+    color: var(--font-c);
+    text-decoration: none;
+}
+
+
+.nav-logo{
+    width: 70px;
+}
+
+.header__nav-item{
+    color: var(--font-c);
+    padding: 8px;
+    border-radius: 20px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.header__nav-item:not(:first-child):hover{
+    background-color: rgb(109, 0, 0);
+}
+
+/*------------------- main ----------------------------*/
+
+h1{
+    text-align: center;
+    font-size: 3em;
+    line-height: 90px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(92, 31, 31);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    user-select: none;
+    width: 100vw;
+}
+
+.main__primary{
+    font-size: 3em;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-wrap: balance;
+    letter-spacing: 10px;
+}
+
+p{
+    text-wrap: pretty;
+    text-align: center;
+    font-size: 1.1em;
+    padding: 4px;
+    user-select: none;
+    background-color: rgb(92, 31, 31);
+    width: 100vw;
+}
+
+.hamburguesa__container{
+    width: 100vw;
+    background-color: rgb(136, 255, 0);
+}
+
+.hamburguesa-palta{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    object-fit: cover;
+    cursor: pointer;
+    max-width: 100vw;
+    height: auto;
+    filter: drop-shadow(2px 2px 3px rgb(0, 0, 0))
+}
+
+.main__primary:hover{
+    transition-duration: 1.1s;
+    color: rgb(136, 255, 0);
+}
+
+.hamburguesa__container:hover{
+    background-color: rgb(102, 190, 1);
+
+}
+
+.button__order{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-c);
+    width: 100vw;
+
+}
+
+.button__order-now{
+    font-size: 3em;
+    text-align: center;
+    color: black;
+    letter-spacing: 1px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 14px;
+    border-bottom: 3px solid black;
+    box-shadow: 2px 2px 4px black;
+}
