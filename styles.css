@@ -170,6 +170,7 @@ p{
     overflow: hidden;
     z-index: 1;
     cursor: pointer;
+    user-select: none;
 }
 
 .button__order-now::before{
