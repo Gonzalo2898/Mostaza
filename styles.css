@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 
-body, header, nav, ul, li, a, img, p, h1, h2 h3{
+body, header, nav, ul, li, a, img, p, h1, h2, h3{
     padding: 0px;
     margin: 0px;
 }
@@ -18,7 +18,7 @@ body{
 /*------------------- HEADER ----------------------------*/
 
 .header{
-    width: 100vw;
+    width: 100dvw;
     height: 80px;
     display: flex;
     align-items: center;
@@ -26,15 +26,16 @@ body{
 }
 
 .header__nav{
-    width: 100vw;
+    width: 100dvw;
 }
 
 .header__nav-list{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     list-style: none;
-    width: 100vw;
+    width: 100dvw;
+    padding: 5px 20px;
 }
 
 .header__nav-list a{
@@ -42,57 +43,83 @@ body{
     text-decoration: none;
 }
 
-
 .nav-logo{
     width: 70px;
 }
 
 .header__nav-item{
     color: var(--font-c);
-    padding: 8px;
     border-radius: 20px;
     text-align: center;
     cursor: pointer;
     user-select: none;
 }
 
-.header__nav-item:not(:first-child):hover{
-    background-color: rgb(109, 0, 0);
+/** .header__nav-item:not(:first-child):hover  TENER EN CUENTA     ---------------------------------------- **/
+
+
+.nav-item__text{
+    display: none;
+}
+
+.header__nav-list a .material-symbols-outlined{
+    vertical-align: middle;
+    line-height: 1;
+    font-size: 4em;
+}
+
+.header__nav-item:nth-child(2), .header__nav-item:nth-child(5), .header__nav-item:nth-child(6){
+    display: none;
+}
+
+.header__nav-item:nth-child(1){
+    order: -1;
+    padding: 10px 0px;
+}
+
+.header__nav-item:nth-child(3){
+    order: 4;
+    padding: 10px 0px;
+}
+
+.header__nav-item:nth-child(4){
+    order: 2;
+    padding: 10px 0px;
 }
 
 /*------------------- main ----------------------------*/
 
 h1{
     text-align: center;
-    font-size: 3em;
-    line-height: 90px;
+    font-size: 2.5em;
     display: flex;
     flex-direction: column;
     background-color: rgb(92, 31, 31);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     user-select: none;
-    width: 100vw;
+    width: 100dvw;
+    line-height: 66px;
 }
 
 .main__primary{
-    font-size: 3em;
+    font-size: 2.5em;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-wrap: balance;
-    letter-spacing: 10px;
+    letter-spacing: 15px;
 }
 
 p{
     text-wrap: pretty;
     text-align: center;
-    font-size: 1.1em;
-    padding: 4px;
+    font-size: 0.8em;
+    padding: 10px;
     user-select: none;
     background-color: rgb(92, 31, 31);
-    width: 100vw;
+    width: 100dvw;
 }
 
 .hamburguesa__container{
-    width: 100vw;
+    width: 100dvw;
     background-color: rgb(136, 255, 0);
 }
 
@@ -102,7 +129,7 @@ p{
     margin-left: auto;
     object-fit: cover;
     cursor: pointer;
-    max-width: 100vw;
+    max-width: 100dvw;
     height: auto;
     filter: drop-shadow(2px 2px 3px rgb(0, 0, 0))
 }
@@ -121,19 +148,47 @@ p{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--background-c);
+    background-color: rgb(136, 255, 0);
     width: 100vw;
-
+    padding: 5px;
+    user-select: none;
 }
 
 .button__order-now{
-    font-size: 3em;
+    font-size: 2em;
     text-align: center;
     color: black;
     letter-spacing: 1px;
+    padding: 10px 20px;
     background-color: white;
-    padding: 10px;
     border-radius: 14px;
     border-bottom: 3px solid black;
     box-shadow: 2px 2px 4px black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.button__order-now::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0px;
+    background-color: var(--background-c);
+    transition: height 2s ease-out;
+    z-index: -1;
+}
+
+.button__order-now:active::before{
+    height: 100%;
+}
+
+.button__order-now:active{
+    color: white;
+    transition: color 1s ease-out;
 }
